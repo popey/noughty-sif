@@ -1,0 +1,44 @@
+# Nøughty Linux Configuration
+
+[boot]
+# GRUB boot menu configuration
+grub_theme = true  # Enable Catppuccin GRUB theme
+grub_timeout = 5   # Boot menu timeout in seconds
+
+[browser]
+brave = false
+firefox = true
+chromium = false
+google-chrome = false
+microsoft-edge = false
+vivaldi = false
+
+[catppuccin]
+accent = "blue"
+flavor = "mocha"
+
+[desktop]
+# Desktop compositor; one of "hyprland", "wayfire" or ""
+compositor = ""
+# Additional desktop packages to install via home-manager
+packages = []
+# One of alacritty, foot, kitty
+terminal-emulator = "kitty"
+
+[terminal]
+# Your preferred shell (bash, fish or zsh)
+shell = "fish"
+# Additional terminal packages to install via home-manager
+packages = [ "rates" ]
+
+[ubuntu]
+
+# Ubuntu features to remove/disable
+[ubuntu.remove]
+apport = false              # Remove crash reporting
+cloud-inint = false         # Remove cloud-init
+kdump-tools = false         # Remove kernel crash dump tools
+multipath-tools = false     # Remove tools for disk multipath device maps
+pollinate = true            # Remove entropy seeding
+snapd = false               # Remove Snap package manager
+unattended-upgrades = false # Remove automatic updates
